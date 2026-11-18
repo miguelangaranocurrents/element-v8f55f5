@@ -125,6 +125,11 @@
     text-align: start;
 }
 
+/* While editing, the body slot hosts the edit composer, whose autocomplete
+   popup is positioned above the composer and must not be clipped. */
+.root.stateEditing .slotBody > * {
+    overflow-y: visible;
+}
 .slotAvatar {
     cursor: pointer;
     user-select: none;

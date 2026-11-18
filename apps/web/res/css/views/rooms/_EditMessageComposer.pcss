@@ -42,3 +42,10 @@ Please see LICENSE files in the repository root for full details.
         }
     }
 }
+
+/* The edit composer is rendered with the mx_EventTile_content class (and inside the event tile's body slot),
+   both of which clip overflow to trap Zalgo text. The autocomplete popup is positioned above the composer,
+   so it must not be clipped. */
+.mx_EventTile_content.mx_EditMessageComposer {
+    overflow: visible;
+}
